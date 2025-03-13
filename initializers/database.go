@@ -23,3 +23,5 @@ func ConnectToDb() {
 	}
 
 }
+
+// sudo -u postgres psql json_crud_api
