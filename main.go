@@ -12,8 +12,8 @@ func init() {
 
 func main() {
 
-	//gin.SetMode(gin.ReleaseMode) //Set for production use
 	// GIN boilerplate code
+	//gin.SetMode(gin.ReleaseMode) //Set for production use
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
