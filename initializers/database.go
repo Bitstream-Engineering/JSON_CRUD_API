@@ -24,4 +24,5 @@ func ConnectToDb() {
 
 }
 
-// sudo -u postgres psql json_crud_api
+// sudo -u postgres psql
+// postgres dir /etc/postgresql/14/main
