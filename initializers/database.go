@@ -1,1 +1,5 @@
 package initializers
+
+func ConnectToDb() {
+
+}
