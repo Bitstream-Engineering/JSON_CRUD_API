@@ -3,3 +3,4 @@ Scripts
 .project
 go.mod
 go.sum
+.dbeaver
