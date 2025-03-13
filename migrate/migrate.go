@@ -1,4 +1,4 @@
-package migrate
+package main
 
 import (
 	"JSON_CRUD_API/initializers"
@@ -12,6 +12,7 @@ func init() {
 }
 
 func main() {
+
 	initializers.DB.AutoMigrate(&models.Post{})
 
 }
