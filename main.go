@@ -5,6 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// init Initializes multiple functions
 func init() {
 	initializers.LoadEnvVariables()
 	initializers.ConnectToDb()
