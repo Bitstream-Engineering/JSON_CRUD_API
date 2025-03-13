@@ -1,16 +1,12 @@
 package main
 
 import (
+	"JSON_CRUD_API/initializers"
 	"github.com/gin-gonic/gin"
-	"github.com/joho/godotenv"
-	"log"
 )
 
 func init() {
-	err := godotenv.Load(".env")
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
+	initializers.LoadEnvVariables()
 
 }
 
