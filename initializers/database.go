@@ -7,13 +7,14 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"log"
+	"os"
 )
 
 var DB *gorm.DB
 
 // ConnectToDb Connects to the database - postgres
 func ConnectToDb() {
-	dsn :=
+	dsn := os.Getenv("DB_URL")
 	DB, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 
 	fmt.Println(DB)
