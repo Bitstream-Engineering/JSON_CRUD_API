@@ -10,6 +10,10 @@ import (
 func PostsCreate(c *gin.Context) {
 
 	// Retrieve data off request body
+	var body struct {
+		Body  string
+		Title string
+	}
 
 	// Create a post
 	post := models.Post{
