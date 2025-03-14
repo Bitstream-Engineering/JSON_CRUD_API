@@ -23,7 +23,7 @@ func LoadEnvVariables() {
 		log.Fatal("Error loading the .env file")
 	}
 	*/
-	fmt.Println(".env loaded successfully")
+	fmt.Println(".env loaded successfully - loadEnvVariables.go")
 
 	/*if err != nil {
 		log.Fatal("Error loading the .env file")
