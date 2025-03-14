@@ -7,7 +7,7 @@ import (
 )
 
 func init() {
-	initializers.LoadEnvVariables()
+	//initializers.LoadEnvVariables()
 	initializers.ConnectToDb()
 
 }
@@ -15,6 +15,7 @@ func init() {
 func main() {
 
 	err := initializers.DB.AutoMigrate(&models.Post{})
+
 	if err != nil {
 		log.Fatal("Error in initializers.DB.AutoMigrate ")
 	}
