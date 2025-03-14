@@ -9,7 +9,10 @@ import (
 
 func PostsCreate(c *gin.Context) {
 
-	post := models.Post{Title: "Title", Body: "Post Body"}
+	post := models.Post{
+		Title: "Title",
+		Body:  "Post Body",
+	}
 
 	result := initializers.DB.Create(&post) // pass pointer of data to Create
 
