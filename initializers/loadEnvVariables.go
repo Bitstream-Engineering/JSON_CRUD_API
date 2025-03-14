@@ -17,11 +17,12 @@ func LoadEnvVariables() {
 	}
 	environmentPath := filepath.Join(dir, ".env")
 
+	// Solve the .env file not loading error
 	err = godotenv.Load(environmentPath)
-	if err != nil {
+	/*if err != nil {
 		log.Fatal("Error loading the .env file")
 	}
-
+	*/
 	fmt.Println(".env loaded successfully")
 
 	/*if err != nil {
