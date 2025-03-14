@@ -1,6 +1,7 @@
 package main
 
 import (
+	"JSON_CRUD_API/controllers"
 	"JSON_CRUD_API/initializers"
 	"github.com/gin-gonic/gin"
 )
@@ -17,10 +18,10 @@ func main() {
 	// GIN boilerplate code
 	//gin.SetMode(gin.ReleaseMode) //Set for production use
 	r := gin.Default()
-	r.GET("/", func(c *gin.Context) {
-		c.JSON(200, map[string]any{
-			"message": "pong",
-		})
-	})
-	r.Run()
+	r.GET("/", controllers.PostsCreate)
+
+	err := r.Run()
+	if err != nil {
+		return
+	}
 }
