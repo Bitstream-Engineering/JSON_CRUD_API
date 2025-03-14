@@ -9,6 +9,9 @@ import (
 
 func PostsCreate(c *gin.Context) {
 
+	// Retrieve data off request body
+
+	// Create a post
 	post := models.Post{
 		Title: "Title",
 		Body:  "Post Body",
