@@ -23,6 +23,3 @@ func ConnectToDb() {
 	}
 
 }
-
-// sudo -u postgres psql
-// postgres dir /etc/postgresql/14/main
