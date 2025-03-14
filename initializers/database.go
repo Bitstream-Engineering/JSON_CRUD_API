@@ -3,6 +3,7 @@
 package initializers
 
 import (
+	"fmt"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"log"
@@ -14,13 +15,15 @@ var DB *gorm.DB
 func ConnectToDb() {
 	//dsn := os.Getenv("DB_URL")
 
+	fmt.Println("Above dsn := ")
 	dsn := "host=localhost user=postgres dbname=json_crud_api port=5432 sslmode=disable"
-	_, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	fmt.Println("Middle of dsn & DB,err")
+	DB, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 
-	//fmt.Println(DB)
 	if err != nil {
 		log.Fatal("Error opening the database.")
 	}
+	fmt.Println("Printing DB", DB)
 
 }
 
