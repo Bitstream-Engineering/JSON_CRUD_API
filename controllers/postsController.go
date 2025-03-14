@@ -3,8 +3,8 @@ package controllers
 import (
 	"JSON_CRUD_API/initializers"
 	"JSON_CRUD_API/models"
+	"fmt"
 	"github.com/gin-gonic/gin"
-	"log"
 )
 
 func PostsCreate(c *gin.Context) {
@@ -14,10 +14,14 @@ func PostsCreate(c *gin.Context) {
 	result := initializers.DB.Create(&post) // pass pointer of data to Create
 
 	if result.Error != nil {
-		log.Fatal("Error in initializers.DB.Create(&post) ")
+		//log.Fatal("Error in initializers.DB.Create(&post)")
+		c.Status(400)
+		return
 	}
 
+	fmt.Println("Rows affected:", result.RowsAffected)
+
 	c.JSON(200, map[string]any{
-		"message": "pong",
+		"post": post,
 	})
 }
