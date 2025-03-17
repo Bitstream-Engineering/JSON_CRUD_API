@@ -20,7 +20,7 @@ func main() {
 	r := gin.Default()
 	r.POST("/posts", controllers.PostsCreate)
 	r.GET("/posts", controllers.PostsIndex)
-	r.GET("/posts/:id")
+	r.GET("/posts/:id", controllers.PostsShow)
 
 	err := r.Run()
 	if err != nil {
