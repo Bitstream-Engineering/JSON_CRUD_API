@@ -4,3 +4,4 @@ Scripts
 go.mod
 go.sum
 .dbeaver
+.idea
