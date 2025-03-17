@@ -91,4 +91,7 @@ func PostsUpdate(c *gin.Context) {
 	})
 
 	// Respond with it
+	c.JSON(200, gin.H{
+		"post": post,
+	})
 }
