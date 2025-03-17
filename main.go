@@ -16,7 +16,7 @@ func init() {
 func main() {
 
 	// GIN boilerplate code
-	//gin.SetMode(gin.ReleaseMode) //Set for production use
+	// gin.SetMode(gin.ReleaseMode) //uncomment for use in production.
 	r := gin.Default()
 	r.POST("/posts", controllers.PostsCreate)    // POST is a safe method because it doesn't modify the state of the server
 	r.PUT("/posts/:id", controllers.PostsUpdate) // PUT updates or replaces existing data on server

@@ -98,6 +98,7 @@ func PostsUpdate(c *gin.Context) {
 
 // PostsDelete - Deletes what has been POST/PUT
 func PostsDelete(c *gin.Context) {
+	//Get id off url
 	id := c.Param("id")
 
 	// DELETE it
