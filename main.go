@@ -22,6 +22,7 @@ func main() {
 	r.PUT("/posts/:id", controllers.PostsUpdate) // PUT updates or replaces existing data on server
 	r.GET("/posts", controllers.PostsIndex)
 	r.GET("/posts/:id", controllers.PostsShow)
+	r.DELETE("posts/:id", controllers.PostsDelete)
 
 	err := r.Run()
 	if err != nil {
