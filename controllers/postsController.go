@@ -15,10 +15,12 @@ func PostsCreate(c *gin.Context) {
 		Title string
 	}
 
+	c.Bind(&body)
+
 	// Create a post
 	post := models.Post{
-		Title: "Title",
-		Body:  "Post Body",
+		Title: body.Title,
+		Body:  body.Body,
 	}
 
 	result := initializers.DB.Create(&post) // pass pointer of data to Create
