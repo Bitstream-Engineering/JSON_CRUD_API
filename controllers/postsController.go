@@ -98,5 +98,12 @@ func PostsUpdate(c *gin.Context) {
 
 // PostsDelete - Deletes what has been POST/PUT
 func PostsDelete(c *gin.Context) {
+	id := c.Param("id")
+
+	// DELETE it
+	initializers.DB.Delete(&models.Post{}, id)
+
+	// Respond
+	c.Status(200)
 
 }
