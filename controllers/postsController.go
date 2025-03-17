@@ -95,3 +95,8 @@ func PostsUpdate(c *gin.Context) {
 		"post": post,
 	})
 }
+
+// PostsDelete - Deletes what has been POST/PUT
+func PostsDelete(c *gin.Context) {
+
+}
