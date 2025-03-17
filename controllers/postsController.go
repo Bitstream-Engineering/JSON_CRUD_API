@@ -53,7 +53,7 @@ func PostsIndex(c *gin.Context) {
 
 }
 
-// PostsShow - PostsShow
+// PostsShow - Retrieve Posts of a given number using the id
 func PostsShow(c *gin.Context) {
 
 	//Get id off url
