@@ -18,7 +18,9 @@ func main() {
 	// GIN boilerplate code
 	//gin.SetMode(gin.ReleaseMode) //Set for production use
 	r := gin.Default()
-	r.GET("/", controllers.PostsCreate)
+	r.POST("/posts", controllers.PostsCreate)
+	r.GET("/posts", controllers.PostsIndex)
+	r.GET("/posts/:id")
 
 	err := r.Run()
 	if err != nil {
