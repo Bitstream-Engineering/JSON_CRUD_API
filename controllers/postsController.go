@@ -85,6 +85,10 @@ func PostsUpdate(c *gin.Context) {
 	initializers.DB.First(&post, id)
 
 	// Update it
+	initializers.DB.Model(&post).Updates(models.Post{
+		Title: body.Title,
+		Body:  body.Body,
+	})
 
 	// Respond with it
 }
