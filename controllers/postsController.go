@@ -37,3 +37,7 @@ func PostsCreate(c *gin.Context) {
 		"post": post,
 	})
 }
+
+func PostsIndex(c *gin.Context) {
+
+}
