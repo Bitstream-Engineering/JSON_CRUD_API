@@ -7,6 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// PostsCreate - Creates the POSTS
 func PostsCreate(c *gin.Context) {
 
 	// Retrieve data off request body
@@ -38,6 +39,7 @@ func PostsCreate(c *gin.Context) {
 	})
 }
 
+// PostsIndex - PostsIndex
 func PostsIndex(c *gin.Context) {
 
 	//GET//Retrieve the posts
@@ -49,4 +51,19 @@ func PostsIndex(c *gin.Context) {
 		"posts": posts,
 	})
 
+}
+
+// PostsShow - PostsShow
+func PostsShow(c *gin.Context) {
+
+	//Get id off url
+	id := c.Param("id")
+	//Retrieve the posts
+	var post models.Post
+	initializers.DB.First(&post, id)
+
+	//Respond with the found request
+	c.JSON(200, gin.H{
+		"post": post,
+	})
 }
